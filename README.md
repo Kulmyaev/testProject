@@ -17,3 +17,6 @@ python -m venv .venv
 ```
 python.exe -m pip install --upgrade pip
 ```
+```
+django-admin startproject hello
+```
