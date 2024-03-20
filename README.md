@@ -32,4 +32,6 @@ Quit the server with CTRL-BREAK.
 
 Вместо CTRL-BREAK вводим CTRL-C
 ***
-
+```
+python manage.py startapp firstapp
+```
