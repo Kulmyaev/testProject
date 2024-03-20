@@ -20,3 +20,16 @@ python.exe -m pip install --upgrade pip
 ```
 django-admin startproject hello
 ```
+```
+cd hello
+```
+```
+ python manage.py runserver
+```
+http://127.0.0.1:8000/
+
+Quit the server with CTRL-BREAK.
+
+Вместо CTRL-BREAK вводим CTRL-C
+***
+
