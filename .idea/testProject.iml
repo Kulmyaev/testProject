@@ -7,6 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/.venv/Include" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/.venv/Lib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/.venv/Scripts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello/firstapp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello/firstapp/migrations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello/hello" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.11" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
