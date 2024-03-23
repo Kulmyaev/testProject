@@ -12,3 +12,13 @@ def about(request):
 
 def contact(request):
     return HttpResponse("<h2>Контакты</h2>")
+
+
+def products(request, productid):
+    output = "<h2>Продукт № {0}</h2>".format(productid)
+    return HttpResponse(output)
+
+
+def user(request, id, name):
+    output = '<h2>Имя: {0}, ID: {1}</h2>'.format(name, id)
+    return HttpResponse(output)
