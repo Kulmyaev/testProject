@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 
@@ -11,14 +11,15 @@ def about(request):
 
 
 def contact(request):
-    return HttpResponse("<h2>Контакты</h2>")
+    return HttpResponseRedirect("/about/123")
 
 
-def products(request, productid):
-    output = "<h2>Продукт № {0}</h2>".format(productid)
+def products(request, productid=0):
+    category = request.GET.get("cat", "")
+    output = "<h2>Продукт № {0} Категория: {1}</h2>".format(productid, category)
     return HttpResponse(output)
 
 
-def user(request, id, name):
+def users(request, id, name):  # Homework
     output = '<h2>Имя: {0}, ID: {1}</h2>'.format(name, id)
     return HttpResponse(output)
