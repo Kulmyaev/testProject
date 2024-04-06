@@ -25,6 +25,7 @@ urlpatterns = [
     path('products/<int:productid>/', views.products), #products
     re_path(r'^about/\d+', views.about), #about/\d+
     path('contact/', views.contact), #contact
+    path('details/', views.details),
     path('admin/', admin.site.urls), #admin/
     path('', views.index, name='home'), #index
 ]

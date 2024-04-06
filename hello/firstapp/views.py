@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, HttpResponseNotFound
 from django.shortcuts import render
 
 
@@ -14,6 +14,10 @@ def contact(request):
     return HttpResponseRedirect("/about/123")
 
 
+def details(request):
+    return HttpResponsePermanentRedirect("/")
+
+
 def products(request, productid=0):
     category = request.GET.get("cat", "")
     output = "<h2>Продукт № {0} Категория: {1}</h2>".format(productid, category)
@@ -23,3 +27,7 @@ def products(request, productid=0):
 def users(request, id, name):  # Homework
     output = '<h2>Имя: {0}, ID: {1}</h2>'.format(name, id)
     return HttpResponse(output)
+
+
+def m404(request):
+    return HttpResponseNotFound('<h1>Страничка потерялась</h1>')
