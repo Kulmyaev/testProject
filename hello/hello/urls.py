@@ -16,16 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from firstapp import views
+from firstapp import views  # Plugin file:views  From application:firstapp
+'''
+path
+re_path
+'''
 
 urlpatterns = [
-    re_path(r'^users/(?P<id>\d+)/(?P<name>\D+)/', views.users),#users
-    re_path(r'^about/contact', views.contact), #about/contact
-    path('products/', views.products),  # The default route
-    path('products/<int:productid>/', views.products), #products
-    re_path(r'^about/\d+', views.about), #about/\d+
-    path('contact/', views.contact), #contact
+    path('users/', views.users),  # users маршрут по умолчанию
+    re_path(r'^users/(?P<id>\d+)/(?P<name>\D+)/', views.users),  # users
+    re_path(r'^about/contact', views.contact),  # about/contact
+    path('products/', views.products),  # The default route маршрут по умолчанию
+    path('products/<int:productid>/', views.products),  # products
+    path('about/', views.about),  # about маршрут по умолчанию
+    re_path(r'^about/\d+', views.about),  # about/\d+
+    path('contact/', views.contact),  # contact
     path('details/', views.details),
-    path('admin/', admin.site.urls), #admin/
-    path('', views.index, name='home'), #index
+    path('admin/', admin.site.urls),  # admin/
+    path('', views.index, name='home'),  # index
 ]

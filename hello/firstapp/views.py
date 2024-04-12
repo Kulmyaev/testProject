@@ -24,8 +24,8 @@ def products(request, productid=0):
     return HttpResponse(output)
 
 
-def users(request, id, name):  # Homework
-    output = '<h2>Имя: {0}, ID: {1}</h2>'.format(name, id)
+def users(request, id='NO', name='NO'):  # Homework Сделать пора метр по умолчанию.
+    output = '<h2>ID: {0}, Имя: {1}</h2>'.format(id,name )
     return HttpResponse(output)
 
 
